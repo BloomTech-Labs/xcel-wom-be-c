@@ -71,7 +71,7 @@ You can do anything your heart can imagine. In life you need colors. This is whe
 
 ## Getting Started
 
-### Enviornment Variables
+### Environment Variables
 
 - `PORT` - API port (optional, but helpful with FE running as well)
   - The following ports are whitelisted for use with okta
