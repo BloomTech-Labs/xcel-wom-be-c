@@ -1,4 +1,4 @@
-# Xcel WO Management ~ _Simplified Work Order Management_
+# Xcel Workorder Management ~ _Simplified Work Order Management_
 
 For steps on how to work with this repository [please see here](https://docs.labs.lambdaschool.com/labs-spa-starter/)
 
