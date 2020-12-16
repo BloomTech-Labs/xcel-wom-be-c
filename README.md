@@ -12,7 +12,7 @@ You can find the deployed project at [🚫URL NAME GOES HERE](🚫copy and paste
 
 Add contributor info below, make sure add images and edit the social links for each member. Add to or delete these place-holders as needed
 
-| Student 1         | Student 2         | Student 3         | Student 4         | Student 5         | Student 6         | Reed Turgeon      |
+| Student 1         | Student 2         | Student 3         | Student 4         | Student 5         | Tommy         | Reed Turgeon      |
 | :-:               | :-:               | :-:               | :-:               | :-:               | :-:               | :-:               |
 | student1-github   | student2-github   | student3-github   | student4-github   | student5-github   | [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/tommyconner96)   | [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/MrT3313)                          |
 | student1-linkedin | student2-linkedin | student3-linkedin | student4-linkedin | student5-linkedin | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/tommyconner96/) | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/reedturgeon/) |
