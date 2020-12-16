@@ -17,6 +17,7 @@ Add contributor info below, make sure add images and edit the social links for e
 | student1-github   | student2-github   | [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/sophiasagan)   | student4-github   | student5-github   | student6-github   | [<img src="https://github.com/favicon.ico" width="25"> ](https://github.com/MrT3313)                          |
 | student1-linkedin | student2-linkedin | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/sophiabraddockjung) | student4-linkedin | student5-linkedin | student6-linkedin | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="25"> ](https://www.linkedin.com/in/reedturgeon/) |
 
+
 <br>
 <br>
 
