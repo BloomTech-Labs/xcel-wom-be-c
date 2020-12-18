@@ -2,8 +2,11 @@ const faker = require('faker');
 
 const profiles = [...new Array(5)].map((i, idx) => ({
   id: idx === 0 ? '00ulthapbErVUwVJy4x6' : faker.random.alphaNumeric(20),
+  uuid: null,
   avatarUrl: faker.image.avatar(),
-  email: idx === 0 ? 'llama001@maildrop.cc"' : faker.internet.email(),
+  email: idx === 0 ? 'llama001@maildrop.cc' : faker.internet.email(),
+  phone: idx === 0 ? '555-867-5309' : faker.phone.phoneNumber(),
+  type: null,
   name:
     idx === 0
       ? 'Test001 User'
