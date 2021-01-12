@@ -18,10 +18,10 @@ const workorder = [
 
 exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex("workOrders")
+  return knex('workOrders')
     .del()
     .then(function () {
       // Inserts seed entries
-      return knex("workOrders").insert(workorder);
+      return knex('workOrders').insert(workorder);
     });
 };
