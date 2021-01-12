@@ -1,6 +1,6 @@
 exports.up = (knex) => {
   return knex.schema.createTable('workOrders', function (table) {
-    table.integer('id').notNullable().unique().primary().increments();
+    table.increments('id').notNullable().unique().primary();
     table.uuid('uuid');
     table.string('assignedTo');
     table.foreign('assignedTo').references('id').inTable('profiles');
