@@ -4,7 +4,6 @@ const workorder = [
   {
     id: 3,
     uuid: null,
-    requestId: faker.random.alphaNumeric(10),
     assignedTo: '00ulthapbErVUwVJy4x6',
     incLocation: 'kitchen', // incident location
     unitAddress: faker.address.secondaryAddress(), // for specific apartment unit not full address location
