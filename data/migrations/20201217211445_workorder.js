@@ -4,10 +4,7 @@ exports.up = (knex) => {
     table.uuid('uuid');
     table.string('requestId');
     table.string('assignedTo');
-    table
-    .foreign('assignedTo')
-    .references('id')
-    .inTable('profiles');
+    table.foreign('assignedTo').references('id').inTable('profiles');
     table.string('incLocation').notNullable();
     table.string('unitAddress').notNullable();
     table.dateTime('dateCreated').defaultTo(knex.fn.now());
@@ -17,7 +14,6 @@ exports.up = (knex) => {
     table.string('status').defaultTo('unassigned');
   });
 };
-
 exports.down = function (knex) {
   return knex.schema.dropTableIfExists('workOrders');
 };
