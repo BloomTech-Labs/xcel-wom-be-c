@@ -8,8 +8,8 @@ const findBy = async (filter) => {
   return db('workOrders').where(filter);
 };
 
-const findById = async (requestId) => {
-  return db('workOrders').where({ requestId }).first().select('*');
+const findById = async (id) => {
+  return db('workOrders').where({ id }).first().select('*');
 };
 
 const create = async (wo) => {
@@ -19,11 +19,7 @@ const create = async (wo) => {
 const update = (id, wo) => {
   console.log(wo);
 
-  return db('workOrders')
-    .where({ requestId: id })
-    .first()
-    .update(wo)
-    .returning('*');
+  return db('workOrders').where({ id: id }).first().update(wo).returning('*');
 };
 
 const remove = async (id) => {
