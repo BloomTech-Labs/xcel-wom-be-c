@@ -18,11 +18,7 @@ const create = async (wo) => {
 
 const update = (id, wo) => {
   console.log(wo);
-  return db('workOrders')
-    .where({ id: id })
-    .first()
-    .update(wo)
-    .returning('*');
+  return db('workOrders').where({ id: id }).first().update(wo).returning('*');
 };
 
 const remove = async (id) => {
