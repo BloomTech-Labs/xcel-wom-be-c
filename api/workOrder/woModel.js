@@ -21,7 +21,7 @@ const update = (id, wo) => {
   return db('workOrders')
     .where({ id: id })
     .first()
-    .update(workOrders)
+    .update(wo)
     .returning('*');
 };
 
