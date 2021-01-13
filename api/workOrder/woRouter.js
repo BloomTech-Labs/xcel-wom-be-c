@@ -57,4 +57,23 @@ router.post('/', async (req, res) => {
   }
 });
 
+// DELETE wo
+router.delete('/:id', function (req, res) {
+  const id = req.params.id;
+  try {
+    workOrders.findById(id).then((wo) => {
+      workOrders.remove(wo.id).then(() => {
+        res
+          .status(200)
+          .json({ message: `work Order ${id} was deleted.`, deleted: wo });
+      });
+    });
+  } catch (err) {
+    res.status(500).json({
+      message: `Could not delete work Order ID: ${id}`,
+      error: err.message,
+    });
+  }
+});
+
 module.exports = router;
