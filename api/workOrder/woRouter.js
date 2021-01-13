@@ -65,7 +65,7 @@ router.delete('/:id', function (req, res) {
       workOrders.remove(wo.id).then(() => {
         res
           .status(200)
-          .json({ message: `work Order ${id} was deleted.`, deleted: wo });
+          .json({ message: `work Order ${id} was deleted.`, deleted: wo.id });
       });
     });
   } catch (err) {
