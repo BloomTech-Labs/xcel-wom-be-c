@@ -58,11 +58,12 @@ router.post('/', async (req, res) => {
 });
 
 // UPDATE wo
-router.put('/:id',  function (req, res) {
+router.put('/:id', function (req, res) {
   const order = req.body;
   if (order) {
     const id = req.params.id;
-    workOrders.findById(id)
+    workOrders
+      .findById(id)
       .then(
         workOrders
           .update(id, order)
