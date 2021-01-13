@@ -17,6 +17,16 @@ router.get('/', function (req, res) {
 });
 
 // get WO by id
+router.get('/:id', function (req, res) {
+  workOrders
+    .findById(req.params.id)
+    .then((order) => {
+      res.status(200).json(order);
+    })
+    .catch((err) => {
+      res.status(500).json({ message: err.message });
+    });
+});
 
 // CREATE wo
 router.post('/', async (req, res) => {
