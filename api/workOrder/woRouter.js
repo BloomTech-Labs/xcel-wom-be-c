@@ -73,7 +73,9 @@ router.delete('/:id', function (req, res) {
       message: `Could not delete work Order ID: ${id}`,
       error: err.message,
     });
-    
+  }
+});
+
 // UPDATE wo
 router.put('/:id', function (req, res) {
   const order = req.body;
