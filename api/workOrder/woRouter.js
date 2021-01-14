@@ -73,6 +73,36 @@ router.delete('/:id', function (req, res) {
       message: `Could not delete work Order ID: ${id}`,
       error: err.message,
     });
+    
+// UPDATE wo
+router.put('/:id', function (req, res) {
+  const order = req.body;
+  if (order) {
+    const id = req.params.id;
+    workOrders
+      .findById(id)
+      .then(
+        workOrders
+          .update(id, order)
+          .then((updated) => {
+            res.status(200).json({
+              message: `Successfully updated order ${id}`,
+              order: updated,
+            });
+          })
+          .catch((err) => {
+            res.status(500).json({
+              message: `Could not update order '${id}'`,
+              error: err.message,
+            });
+          })
+      )
+      .catch((err) => {
+        res.status(404).json({
+          message: `Could not find order '${id}'`,
+          error: err.message,
+        });
+      });
   }
 });
 
