@@ -4,6 +4,83 @@ const workOrders = require('./woModel');
 const router = express.Router();
 
 // get all WO's
+
+/**
+ * @swagger
+ * components:
+ *  schemas:
+ *    workOrder:
+ *      type: object
+ *      required:
+ *        - id
+ *        - incLocation
+ *        - unitAddress
+ *        - description
+ *      properties:
+ *        id:
+ *          type: string
+ *          description: This is a unique autoincrementally created key
+ *        uuid:
+ *          type: string
+ *        assignedTo:
+ *          type: string
+ *          description: okta id of worker assigned to task
+ *        incLocation:
+ *          type: string
+ *          description: location of incident
+ *        unitAddress:
+ *          type: string
+ *          description: address of specific apartment or unit
+ *        dateCreated:
+ *          type: datetime
+ *          description: time work order created
+ *        dateClosed:
+ *          type: datetime
+ *          description: time work order closed
+ *        description:
+ *          type: string
+ *          description: description of incident or item needing maintenance
+ *        priority:
+ *          type: string
+ *          description: level of priority in
+ *        status:
+ *          type: string
+ *          description: status of assigned ticket
+ *      example:
+ *        id: 1
+ *        uuid: null
+ *        assignedTo: '00ulthapbErVUwVJy4x6'
+ *        incLocation: 'basement'
+ *        unitAddress: 'Suite 211'
+ *        dateCreated: '2020-12-27T18:44:15.652Z'
+ *        dateClosed: '2021-10-07T05:04:36.481Z'
+ *        description: 'Furnace is not working'
+ *        priority: '1'
+ *        status: 'assigned'
+ *
+ * /orders:
+ *  get:
+ *    description: Returns a list of workOrders
+ *    summary: Get a list of all workOrders
+ *    security:
+ *      - okta: []
+ *    tags:
+ *      - workOrder
+ *    responses:
+ *      200:
+ *        description: array of workOrders
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: array
+ *              items:
+ *                $ref: '#/components/schemas/workOrder'
+ *      401:
+ *        $ref: '#/components/responses/UnauthorizedError'
+ *      403:
+ *        $ref: '#/components/responses/UnauthorizedError'
+ */
+
 router.get('/', function (req, res) {
   workOrders
     .findAll()
