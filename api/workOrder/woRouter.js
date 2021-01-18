@@ -94,6 +94,43 @@ router.get('/', function (req, res) {
 });
 
 // get WO by id
+
+/**
+ * @swagger
+ * components:
+ *  parameters:
+ *    workOrderId:
+ *      name: id
+ *      in: path
+ *      description: ID of the workOrder to return
+ *      required: true
+ *      example: 3
+ *      schema:
+ *        type: integer
+ *
+ * /orders/{id}:
+ *  get:
+ *    description: Find a single workOrder by ID
+ *    summary: Returns a single workOrder
+ *    security:
+ *      - okta: []
+ *    tags:
+ *      - workOrder
+ *    parameters:
+ *      - $ref: '#/components/parameters/workOrderId'
+ *    responses:
+ *      200:
+ *        description: A workOrder object
+ *        content:
+ *          application/json:
+ *            schema:
+ *              $ref: '#/components/schemas/WorkOrder'
+ *      401:
+ *        $ref: '#/components/responses/UnauthorizedError'
+ *      404:
+ *        description: 'WorkOrder not found'
+ */
+
 router.get('/:id', function (req, res) {
   workOrders
     .findById(req.params.id)
@@ -106,6 +143,44 @@ router.get('/:id', function (req, res) {
 });
 
 // CREATE wo
+
+/**
+ * @swagger
+ * /orders:
+ *  post:
+ *    summary: Add a workOrder
+ *    security:
+ *      - okta: []
+ *    tags:
+ *      - workOrder
+ *    requestBody:
+ *      description: WorkOrder object to to be added
+ *      content:
+ *        application/json:
+ *          schema:
+ *            $ref: '#/components/schemas/WorkOrder'
+ *    responses:
+ *      400:
+ *        $ref: '#/components/responses/BadRequest'
+ *      401:
+ *        $ref: '#/components/responses/UnauthorizedError'
+ *      404:
+ *        description: 'WorkOrder not found'
+ *      200:
+ *        description: A workOrder object
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              properties:
+ *                message:
+ *                  type: string
+ *                  description: A message about the result
+ *                  example: workOrder created
+ *                workOrder:
+ *                  $ref: '#/components/schemas/WorkOrder'
+ */
+
 router.post('/', async (req, res) => {
   const order = req.body;
   if (order) {
@@ -135,6 +210,38 @@ router.post('/', async (req, res) => {
 });
 
 // DELETE wo
+
+/**
+ * @swagger
+ * /orders/{id}:
+ *  delete:
+ *    summary: Remove a workOrder
+ *    security:
+ *      - okta: []
+ *    tags:
+ *      - workOrder
+ *    parameters:
+ *      - $ref: '#/components/parameters/workOrderId'
+ *    responses:
+ *      401:
+ *        $ref: '#/components/responses/UnauthorizedError'
+ *      404:
+ *        $ref: '#/components/responses/NotFound'
+ *      200:
+ *        description: A workOrder object
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              properties:
+ *                message:
+ *                  type: string
+ *                  description: A message about the result
+ *                  example: WorkOrder 3 was deleted.
+ *                workOrder:
+ *                  $ref: '#/components/schemas/WorkOrder'
+ */
+
 router.delete('/:id', function (req, res) {
   const id = req.params.id;
   try {
@@ -154,6 +261,42 @@ router.delete('/:id', function (req, res) {
 });
 
 // UPDATE wo
+
+/**
+ * @swagger
+ * /orders:
+ *  put:
+ *    summary: Update a workOrder
+ *    security:
+ *      - okta: []
+ *    tags:
+ *      - workOrder
+ *    requestBody:
+ *      description: WorkOrder object to to be updated
+ *      content:
+ *        application/json:
+ *          schema:
+ *            $ref: '#/components/schemas/WorkOrder'
+ *    responses:
+ *      401:
+ *        $ref: '#/components/responses/UnauthorizedError'
+ *      404:
+ *        $ref: '#/components/responses/NotFound'
+ *      200:
+ *        description: A workOrder object
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              properties:
+ *                message:
+ *                  type: string
+ *                  description: A message about the result
+ *                  example: workOrder created
+ *                workOrder:
+ *                  $ref: '#/components/schemas/WorkOrder'
+ */
+
 router.put('/:id', function (req, res) {
   const order = req.body;
   if (order) {
