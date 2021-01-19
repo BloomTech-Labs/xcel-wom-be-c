@@ -124,7 +124,7 @@ router.get('/', function (req, res) {
  *        content:
  *          application/json:
  *            schema:
- *              $ref: '#/components/schemas/WorkOrder'
+ *              $ref: '#/components/schemas/workOrder'
  *      401:
  *        $ref: '#/components/responses/UnauthorizedError'
  *      404:
@@ -158,7 +158,7 @@ router.get('/:id', function (req, res) {
  *      content:
  *        application/json:
  *          schema:
- *            $ref: '#/components/schemas/WorkOrder'
+ *            $ref: '#/components/schemas/workOrder'
  *    responses:
  *      400:
  *        $ref: '#/components/responses/BadRequest'
@@ -178,7 +178,7 @@ router.get('/:id', function (req, res) {
  *                  description: A message about the result
  *                  example: workOrder created
  *                workOrder:
- *                  $ref: '#/components/schemas/WorkOrder'
+ *                  $ref: '#/components/schemas/workOrder'
  */
 
 router.post('/', async (req, res) => {
@@ -239,7 +239,7 @@ router.post('/', async (req, res) => {
  *                  description: A message about the result
  *                  example: WorkOrder 3 was deleted.
  *                workOrder:
- *                  $ref: '#/components/schemas/WorkOrder'
+ *                  $ref: '#/components/schemas/workOrder'
  */
 
 router.delete('/:id', function (req, res) {
@@ -276,7 +276,7 @@ router.delete('/:id', function (req, res) {
  *      content:
  *        application/json:
  *          schema:
- *            $ref: '#/components/schemas/WorkOrder'
+ *            $ref: '#/components/schemas/workOrder'
  *    responses:
  *      401:
  *        $ref: '#/components/responses/UnauthorizedError'
@@ -294,7 +294,7 @@ router.delete('/:id', function (req, res) {
  *                  description: A message about the result
  *                  example: workOrder created
  *                workOrder:
- *                  $ref: '#/components/schemas/WorkOrder'
+ *                  $ref: '#/components/schemas/workOrder'
  */
 
 router.put('/:id', function (req, res) {

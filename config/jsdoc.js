@@ -22,7 +22,7 @@ module.exports = {
       {
         name: 'workOrder',
         description: 'Data for work orders',
-      }
+      },
     ],
     components: {
       securitySchemes: {
