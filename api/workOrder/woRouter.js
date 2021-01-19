@@ -21,7 +21,13 @@ router.get('/:id', function (req, res) {
   workOrders
     .findById(req.params.id)
     .then((order) => {
-      res.status(200).json(order);
+      if (order) {
+        res.status(200).json(order);
+      } else {
+        res
+          .status(404)
+          .json({ message: `order ID ${req.params.id} not found` });
+      }
     })
     .catch((err) => {
       res.status(500).json({ message: err.message });
