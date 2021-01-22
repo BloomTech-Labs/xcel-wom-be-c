@@ -1,5 +1,5 @@
 const express = require('express');
-// const authRequired = require('../middleware/authRequired');
+const authRequired = require('../middleware/authRequired');
 const workOrders = require('./woModel');
 const router = express.Router();
 
@@ -81,7 +81,7 @@ const router = express.Router();
  *        $ref: '#/components/responses/UnauthorizedError'
  */
 
-router.get('/', function (req, res) {
+router.get('/', authRequired, function (req, res) {
   workOrders
     .findAll()
     .then((orders) => {
@@ -131,7 +131,7 @@ router.get('/', function (req, res) {
  *        description: 'WorkOrder not found'
  */
 
-router.get('/:id', function (req, res) {
+router.get('/:id', authRequired, function (req, res) {
   workOrders
     .findById(req.params.id)
     .then((order) => {
@@ -187,7 +187,7 @@ router.get('/:id', function (req, res) {
  *                  $ref: '#/components/schemas/workOrder'
  */
 
-router.post('/', async (req, res) => {
+router.post('/', authRequired, async (req, res) => {
   const order = req.body;
   if (order) {
     const id = order.id || 0;
@@ -248,7 +248,7 @@ router.post('/', async (req, res) => {
  *                  $ref: '#/components/schemas/workOrder'
  */
 
-router.delete('/:id', function (req, res) {
+router.delete('/:id', authRequired, function (req, res) {
   const id = req.params.id;
   try {
     workOrders.findById(id).then((wo) => {
@@ -303,7 +303,7 @@ router.delete('/:id', function (req, res) {
  *                  $ref: '#/components/schemas/workOrder'
  */
 
-router.put('/:id', function (req, res) {
+router.put('/:id', authRequired, function (req, res) {
   const order = req.body;
   if (order) {
     const id = req.params.id;
