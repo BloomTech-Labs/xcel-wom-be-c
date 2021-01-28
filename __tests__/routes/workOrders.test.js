@@ -7,6 +7,10 @@ app.use(express.json());
 
 jest.mock('../../api/workOrder/woModel');
 
+jest.mock('../../api/middleware/authRequired', () =>
+  jest.fn((req, res, next) => next())
+);
+
 describe('profiles router endpoints', () => {
   beforeAll(() => {
     // This is the module/route being tested
