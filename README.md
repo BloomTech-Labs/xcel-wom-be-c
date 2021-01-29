@@ -51,9 +51,9 @@ Add contributor info below, make sure add images and edit the social links for e
 ### Getting a profile by Id
  - URL: /profiles/:id
 
-## Work Odrers
+## Work Orders
 
-### Get all work odrers
+### Get all work orders
  - URL: /orders/
  - Method: GET
 ### Get a work order by Id
@@ -61,7 +61,7 @@ Add contributor info below, make sure add images and edit the social links for e
  - Method: GET
 
 ### Create a new work order
- - URL: /oders
+ - URL: /orders
  - Method: POST
 
 ### Update a work order
@@ -76,7 +76,7 @@ Documentation available on [Swagger](https://xcel-wom-api-c.herokuapp.com/api-do
 
 ## Getting Started
 
-### Enviornment Variables
+### Environment Variables
 
 - `PORT` - API port (optional, but helpful with FE running as well)
   - The following ports are whitelisted for use with okta
