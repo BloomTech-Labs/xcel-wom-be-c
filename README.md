@@ -69,7 +69,7 @@ Add contributor info below, make sure add images and edit the social links for e
  - Method: PUT
 
 ### Delete a work order
- - URL: /oders/:id
+ - URL: /orders/:id
  - Method: DELETE
 
 Documentation available on [Swagger](https://xcel-wom-api-c.herokuapp.com/api-docs/)
