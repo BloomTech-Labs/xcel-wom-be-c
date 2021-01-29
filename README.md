@@ -20,13 +20,12 @@ Add contributor info below, make sure add images and edit the social links for e
 <br>
 <br>
 
-🚫 Optional examples of using images with links for your tech stack, make sure to change these to fit your project
 
 ![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![node express](https://img.shields.io/node/v-lts/express)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 
-🚫 more info on using badges [here](https://github.com/badges/shields)
+
 
 ### Key Features
 
@@ -36,37 +35,44 @@ Add contributor info below, make sure add images and edit the social links for e
 - feature four
 - feature five
 
-#### Back end deployed to `🚫insert service here`
+#### Back end deployed to Heroku
 
-#### [Front end](🚫link to back end repo here) built using:
+#### [Back end](https://xcel-wom-api-c.herokuapp.com) built using:
 
-#### 🚫 back end framework and key libraries go here
-
-- point one
-- point two
-- point three
-
-🚫 List the rest of the back end end features and libraries in the same format as the framework above
+- ExpressJS
+- PostgreSQL
+- Docker
 
 # APIs
+## Profiles
+### Get All profiles
+  - URL: /profiles/
 
-## Authentication API here
+### Getting a profile by Id
+ - URL: /profiles/:id
 
-🚫Replace text below with a description and link to your API swagger docs
+## Work Odrers
 
-Water's like me. It's laaazy ... Boy, it always looks for the easiest way to do things A little happy sunlight shining through there. Let all these little things happen. Don't fight them. Learn to use them. Even the worst thing we can do here is good.
+### Get all work odrers
+ - URL: /orders/
+ - Method: GET
+### Get a work order by Id
+ - URL: /orders/:id
+ - Method: GET
 
-## Payment API here
+### Create a new work order
+ - URL: /oders
+ - Method: POST
 
-🚫Replace text below with a description of the API or delete
+### Update a work order
+ - URL: /orders/:id
+ - Method: PUT
 
-This is the way you take out your flustrations. Get away from those little Christmas tree things we used to make in school. Isn't it fantastic that you can change your mind and create all these happy things? Everything's not great in life, but we can still find beauty in it.
+### Delete a work order
+ - URL: /oders/:id
+ - Method: DELETE
 
-## Misc API here
-
-🚫Replace text below with a description of the API
-
-You can do anything your heart can imagine. In life you need colors. This is where you take out all your hostilities and frustrations. It's better than kicking the puppy dog around and all that so. I'm sort of a softy, I couldn't shoot Bambi except with a camera. Trees get lonely too, so we'll give him a little friend. We'll lay all these little funky little things in there.
+Documentation available on [Swagger](https://xcel-wom-api-c.herokuapp.com/api-docs/)
 
 ## Getting Started
 
@@ -149,4 +155,4 @@ Remember that this project is licensed under the MIT license, and by submitting 
 
 ## Documentation
 
-See [Backend Documentation](🚫*link to your backend API SWAGGER DOCS here*) for details on the backend of our project.
+See [Backend Documentation](https://xcel-wom-api-c.herokuapp.com/api-docs/) for details on the backend of our project.
